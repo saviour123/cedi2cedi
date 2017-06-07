@@ -6,12 +6,10 @@ import tornado.httpserver
 
 static = os.path.join(os.path.dirname(__file__), "static")
 templates = os.path.join(os.path.dirname(__file__), "templates")
-
 port = 8888
-# route_params = {'path': static_dir, 'default_filename' : "index.html"}
 
 
-class Application(tornado.web.Application):
+class Application(web.Application):
     def __init__(self):
         handlers = [
             (r'/static/(.*)', web.StaticFileHandler),
