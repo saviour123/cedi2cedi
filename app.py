@@ -1,33 +1,38 @@
 import os
 import tornado.ioloop
 import tornado.web as web
+import tornado.httpserver
 
 
-static_dir = os.path.join(os.path.dirname(__file__), "static")
+static = os.path.join(os.path.dirname(__file__), "static")
+templates = os.path.join(os.path.dirname(__file__), "templates")
+
 port = 8888
-route_params = {'path': static_dir, 'default_filename' : "index.html"}
+# route_params = {'path': static_dir, 'default_filename' : "index.html"}
 
 
-class MainHandler(web.RequestHandler):
+class Application(tornado.web.Application):
+    def __init__(self):
+        handlers = [
+            (r'/static/(.*)', web.StaticFileHandler),
+            (r"/", HomeHandler),
+        ]
+        settings = dict(
+            template_path=templates,
+            static_path=static,
+            debug=True
+        )
+        super(Application, self).__init__(handlers, **settings)
+
+
+class HomeHandler(web.RequestHandler):
     def get(self):
         self.render('index.html')
 
-handlers = [
-    (r'/(.*)', web.StaticFileHandler, route_params),
-    (r"/", MainHandler)
-    ]
-
-settings = {
-    "static_path": static_dir,
-    "template_path": static_dir,
-    "debug": True,
-}
-
-
 
 def make_app():
-    app = web.Application(handlers, **settings)
-    app.listen(port)
+    http_server = tornado.httpserver.HTTPServer(Application())
+    http_server.listen(port)
     tornado.ioloop.IOLoop.current().start()
 
 
