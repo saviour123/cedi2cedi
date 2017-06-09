@@ -28,6 +28,10 @@ class HomeHandler(web.RequestHandler):
         self.render('index.html')
 
 
+#class ComputeHandler(web.RequestHandler):
+#    def post(self):
+
+
 def make_app():
     http_server = tornado.httpserver.HTTPServer(Application())
     http_server.listen(port)

@@ -4,16 +4,23 @@ body{
     background: #e7e7e7;
 }
 
-
-
-
 .rectangle{
     margin: 5em auto;
     background-color: #fff;
     height: 26.5em;
     width: 48.5em;
     border-radius: 4px;
-    -webkit-box-shadow: 10px 10px 5px 1px rgba(40,141,156,0.28);
-    -moz-box-shadow: 10px 10px 5px 1px rgba(40,141,156,0.28);
-    box-shadow: 10px 10px 5px 1px rgba(40,141,156,0.28);
+    -webkit-box-shadow: 10px 10px 5px 1px rgb(152,159,221);
+    -moz-box-shadow: 10px 10px 5px 1px rgba(152,159,221);
+    box-shadow: 10px 10px 5px 1px rgba(152,159,221);
+}
+
+.rect-form{
+    padding: 15px;
+    text-align: center;
+}
+
+#input-control{
+    width: 25em;
+    margin: 1.5em auto;
 }

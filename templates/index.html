@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cedi2Cedi Convertor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.14/spectre.min.css">
+    <link rel="stylesheet" href={{ static_url("spectre.min.css") }}>
     <link rel="stylesheet" href={{ static_url("style.css") }}/>
 </head>
 <body>
@@ -11,12 +11,29 @@
 <div class="container">
   <div class="columns">
       <div class="column col-12"> 
-        <div class="rectangle">lorem</div> 
+          <div class="rectangle">
+              <form class="rect-form">
+                  <div class="form-group">
+                      <label class="form-label" for="input-example-1">
+                          Enter Amount to convert to Old Cedis
+                      </label>
+                      <input class="form-input" type="text" id="input-control" />
+                   </div>
+
+                  <div class="form-group">
+                      <label class="form-switch">
+                          <input type="checkbox" />
+                          <i class="form-icon"></i>
+                          Convert to new cedis!
+                      </label>
+                  </div>
+              </form>
+              <div id='result'></div>
+          </div>
       </div>
   </div>
-
-  </div>
-  <script src="{{ static_url("script.js")  }}"></script>
+</div>
+<script src="{{ static_url("script.js")  }}"></script>
 </body>
 </html>
 
