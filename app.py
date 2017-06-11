@@ -27,7 +27,6 @@ class HomeHandler(web.RequestHandler):
     def get(self):
         self.render('index.html')
 
-
 #class ComputeHandler(web.RequestHandler):
 #    def post(self):
 
