@@ -1,11 +1,21 @@
 /**
  * get form the amount from the form
 */
-var nGHCField = document.getElementById('input-control');
+var inputVal = document.getElementById('input-control');
 var button = document.querySelector('input[type=button]');
+var ifcheck = document.querySelector('input[type=checkbox]');
 
-nGHCField.oninput = function(){
-    amtOldCedi = parseFloat(nGHCField.value) * 10000;
-    return result.innerHTML = amtOldCedi.toLocaleString();
+inputVal.oninput = function(){
+    if (!inputVal.value){
+        console.log(inputVal.value);
+    }
+    if (!ifcheck.checked) {
+        amtNewCedi = parseFloat(inputVal.value) / 10000;
+        result.innerHTML = amtNewCedi.toLocaleString() + " " + "New Ghana Cedis";
+    } else {
+        amtOldCedi = parseFloat(inputVal.value) * 10000;
+        result.innerHTML = amtOldCedi.toLocaleString() + " " +  "Old Ghana Cedis";
+    }
 };
+
 
