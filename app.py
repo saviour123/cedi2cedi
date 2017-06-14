@@ -1,4 +1,6 @@
 import os
+import sys
+import tornado.wsgi
 import tornado.ioloop
 import tornado.web as web
 import tornado.httpserver
@@ -6,6 +8,7 @@ import tornado.httpserver
 
 static = os.path.join(os.path.dirname(__file__), "static")
 templates = os.path.join(os.path.dirname(__file__), "templates")
+sys.path.insert(0, os.path.join(os.path.abspath('.'), 'lib'))
 port = 8888
 
 
@@ -27,15 +30,12 @@ class HomeHandler(web.RequestHandler):
     def get(self):
         self.render('index.html')
 
-#class ComputeHandler(web.RequestHandler):
-#    def post(self):
-
-
 def make_app():
-    http_server = tornado.httpserver.HTTPServer(Application())
-    http_server.listen(port)
-    tornado.ioloop.IOLoop.current().start()
-
+   http_server = tornado.httpserver.HTTPServer(Application())
+   http_server.listen(port)
+   tornado.ioloop.IOLoop.current().start()
 
 if __name__ == "__main__":
     make_app()
+else:
+    app = tornado.wsgi.WSGIAdapter(Application())

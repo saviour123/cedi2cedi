@@ -24,3 +24,11 @@ body{
     width: 25em;
     margin: 1.5em auto;
 }
+
+#result {
+    text-align: center;
+}
+
+#hr-divider {
+    margin: 2rem 0 2rem 0;
+}
