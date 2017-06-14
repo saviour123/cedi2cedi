@@ -24,12 +24,12 @@ echo "web: python app.py" >> Procfile
 
 echo "Committing to Git"
 
-git add .
+git add --all
 git commit -m "Initial Commit"
 
 echo "Creating Heroku app & pushing"
 
-heroku create --stack cedi2cedi
+heroku create cedi2cedi
 git push heroku master
 
 echo "All Done!"
