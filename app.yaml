@@ -7,3 +7,10 @@ handlers:
       static_dir: static
     - url: /.*
       script: app.app
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^env$ #virtual environment's folder
