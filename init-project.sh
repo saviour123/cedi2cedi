@@ -8,17 +8,17 @@
 # --------------------------
 
 # git!
-git init
+#git init
 
 # --------------------------
 
 # set up the pip requirements
-touch requirements.txt
-echo "Tornado==4.5.1" >> requirements.txt
+#touch requirements.txt
+#echo "Tornado==4.5.1" >> requirements.txt
 
 # set up the Procfile
-touch Procfile
-echo "web: python app.py" >> Procfile
+#touch Procfile
+#echo "web: python app.py" >> Procfile
 
 # --------------------------
 
@@ -29,7 +29,7 @@ git commit -m "Initial Commit"
 
 echo "Creating Heroku app & pushing"
 
-heroku create cedi2cedi
+# heroku create cedi2cedi
 git push heroku master
 
 echo "All Done!"
