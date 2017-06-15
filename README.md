@@ -1,8 +1,9 @@
 # cedi2cedi
 ------------------------------------------------------
 To conclude my exploit on the tornado framework I built something in honour of the lady I love. Curious to know her?
-I call this app cedi2cedi, don't laugh! I does conversion from New Ghana Cedis to Old Ghana and vice-versa.
-I can be budle simpler with static HTML or PHP. 
+I call this app cedi2cedi, don't laugh! 
+
+It does conversion from New Ghana Cedis to Old Ghana and vice-versa.
 Give me some stars when you like the project.
 
 Feel the Live version here: [https://cedi2cedi.herokuapp.com](https://cedi2cedi.herokuapp.com)
@@ -16,7 +17,7 @@ Feel the Live version here: [https://cedi2cedi.herokuapp.com](https://cedi2cedi.
 
 ## Lets dust it <3
 
-1. Clone the Repo and `cd` into it
+* Clone the Repo and `cd` into it
 
     `git clone https://github.com/saviour123/cedi2cedi.git && cd cedi2cedi`
 
