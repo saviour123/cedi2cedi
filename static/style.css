@@ -32,3 +32,9 @@ body{
 #hr-divider {
     margin: 2rem 0 2rem 0;
 }
+
+/*--------------footer---------------------*/
+#main-footer {
+    margin-top: 13.5em;
+    text-align: center;
+}

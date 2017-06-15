@@ -1,24 +1,26 @@
-# Project creation script
+# Project creation and deployment script
 # (for Tornado on Heroku)
 #
 # by Mike Dory | dory.me
-# 11.12.11
+# date: 11.12.11
 # modified by saviour | @saviour123
+# date: 14.6.2017
 
 # --------------------------
+# make sure heroku toolbelt and git is installed before running the scripts
 
 # git!
-#git init
+git init
 
 # --------------------------
 
 # set up the pip requirements
-#touch requirements.txt
-#echo "Tornado==4.5.1" >> requirements.txt
+touch requirements.txt
+echo "Tornado==4.5.1" >> requirements.txt
 
-# set up the Procfile
-#touch Procfile
-#echo "web: python app.py" >> Procfile
+# create the Procfile
+touch Procfile
+echo "web: gunicorn app:app" >> Procfile
 
 # --------------------------
 
@@ -29,7 +31,10 @@ git commit -m "Initial Commit"
 
 echo "Creating Heroku app & pushing"
 
-# heroku create cedi2cedi
+# set project name
+name=cedi2cedi
+
+heroku create $name
 git push heroku master
 
 echo "All Done!"
