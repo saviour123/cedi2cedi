@@ -4,7 +4,7 @@ To conclude my exploit on the tornado framework I built something in honour of t
 I call this app cedi2cedi, don't laugh! 
 
 It does conversion from New Ghana Cedis to Old Ghana and vice-versa.
-Give me some stars when you like the project.
+Give me some stars if you like the project.
 
 Feel the Live version here: [https://cedi2cedi.herokuapp.com](https://cedi2cedi.herokuapp.com)
 

@@ -1,9 +1,6 @@
-/**
- * get form the amount from the form
-*/
-var inputVal = document.getElementById('input-control');
-var button = document.querySelector('input[type=button]');
-var ifcheck = document.querySelector('input[type=checkbox]');
+const inputVal = document.getElementById('input-control');
+const button = document.querySelector('input[type=button]');
+const ifcheck = document.querySelector('input[type=checkbox]');
 
 inputVal.oninput = function(){
     if (inputVal.value == ""){
@@ -18,5 +15,3 @@ inputVal.oninput = function(){
         }
     }
 };
-
-
