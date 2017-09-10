@@ -1,9 +1,6 @@
 # Project creation and deployment script
 # (for Tornado on Heroku)
 #
-# by Mike Dory | dory.me
-# date: 11.12.11
-# modified by saviour | @saviour123
 # date: 14.6.2017
 
 # --------------------------
